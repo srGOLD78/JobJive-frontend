@@ -7,7 +7,12 @@ from datetime import date
 
 
 def index(request):
-    return render(request, "index.html")
+    jobs = Job.objects.all().order_by('-start_date')
+    apply = Application.objects.all()
+    data = []
+    for i in apply:
+        data.append(i.job.id)
+    return render(request, "index.html", {'jobs': jobs, 'data': data})
 
 
 def user_login(request):
@@ -357,3 +362,4 @@ def delete_company(request, myid):
     company = User.objects.filter(id=myid)
     company.delete()
     return redirect("/all_companies")
+
