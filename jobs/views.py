@@ -136,8 +136,6 @@ def company_signup(request):
     if request.method == "POST":
         username = request.POST['username']
         email = request.POST['email']
-        first_name = request.POST['first_name']
-        last_name = request.POST['last_name']
         password1 = request.POST['password1']
         password2 = request.POST['password2']
         phone = request.POST['phone']
@@ -148,7 +146,7 @@ def company_signup(request):
             messages.error(request, "Passwords do not match.")
             return redirect('/signup')
 
-        user = User.objects.create_user(first_name=first_name, last_name=last_name, email=email, username=username,
+        user = User.objects.create_user(first_name='.', last_name='.', email=email, username=username,
                                         password=password1)
         company = Company.objects.create(user=user, phone=phone, image=image, company_name=company_name, type="company",
                                          status="pending")
