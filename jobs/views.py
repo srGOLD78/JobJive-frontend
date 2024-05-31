@@ -7,7 +7,12 @@ from datetime import date
 
 
 def index(request):
-    return render(request, "index.html")
+    jobs = Job.objects.all().order_by('-start_date')
+    apply = Application.objects.all()
+    data = []
+    for i in apply:
+        data.append(i.job.id)
+    return render(request, "index.html", {'jobs': jobs, 'data': data})
 
 
 def user_login(request):
@@ -131,8 +136,6 @@ def company_signup(request):
     if request.method == "POST":
         username = request.POST['username']
         email = request.POST['email']
-        first_name = request.POST['first_name']
-        last_name = request.POST['last_name']
         password1 = request.POST['password1']
         password2 = request.POST['password2']
         phone = request.POST['phone']
@@ -143,7 +146,7 @@ def company_signup(request):
             messages.error(request, "Passwords do not match.")
             return redirect('/signup')
 
-        user = User.objects.create_user(first_name=first_name, last_name=last_name, email=email, username=username,
+        user = User.objects.create_user(first_name='.', last_name='.', email=email, username=username,
                                         password=password1)
         company = Company.objects.create(user=user, phone=phone, image=image, company_name=company_name, type="company",
                                          status="pending")
@@ -357,3 +360,4 @@ def delete_company(request, myid):
     company = User.objects.filter(id=myid)
     company.delete()
     return redirect("/all_companies")
+

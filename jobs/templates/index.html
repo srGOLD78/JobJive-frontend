@@ -5,18 +5,33 @@
 {% block css %}
 {% endblock %}
 {% block body %}
-{% load static %}   
-<div class="container-fluid mt-2">
-    <img src="{% static 'Recruitment Vector.png' %}" alt="" width="100%" height="450px">
+{% load static %}
+<link rel="stylesheet" href="../static/index.css">
+<div class="main-page">
+    <p class="main-page-text">
+        Твой карьерный путь начинается здесь!
+    </p>
+<img class="main-page-img" alt="" src="../static/icons/man.png">
 </div>
-    <div class="container-fluid mt-2" style="background-color: #4f868c; width: 100%;">
-        <div class="row">
-            <div class="col-md-4">
-                <h3 style="color: aliceblue;">Contact Us</h3>
-                <p style="color: aliceblue">Email:JobJive@gmail.ru</p>
-                <p style="color: aliceblue">Mobile No.:+79773210969</p>
-            </div>
+<div class="main-page-job">
+    <div class="row-img">
+        <p class=main-page-job-text">
+            Помогаем найти работу:
+        </p>
+    <img class="small-icon" alt="" src="../static/icons/google.svg">
+        <img class="small-icon" alt="" src="../static/icons/facebook.svg">
+        <img class="small-icon" alt="" src="../static/icons/Microsoft.svg">
+        <img class="small-icon" alt="" src="../static/icons/yandex.svg">
+    </div>
+</div>
+<footer class="container-fluid mt-2 sex" style="background-color: #31498c; width: 100%;">
+    <div class="row">
+        <div class="col-md-4">
+            <h3 style="color: aliceblue;">Contact Us</h3>
+            <p style="color: aliceblue">Email:JobJive@gmail.com</p>
+            <p style="color: aliceblue">Mobile No.:+79773210969</p>
         </div>
     </div>
+</footer>
     
 {% endblock %}

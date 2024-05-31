@@ -1,0 +1,28 @@
+.btn {
+    background-color: #31498c;
+    color: white;
+    font-size: larger;
+    width: 8rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.button-submit {
+    display: flex;
+    justify-content: center;
+}
+
+.gender{
+    border: 1px solid lightgrey;
+    padding: 5px;
+    border-radius: 6px;
+}
+
+.registration-form {
+    border-radius: 50px;
+    padding: 5%;
+    margin-top: 40px;
+    margin-left: 10%;
+    width: 80%;
+    background-color: #b6d0e6;
+}

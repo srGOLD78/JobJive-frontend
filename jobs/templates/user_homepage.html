@@ -9,6 +9,8 @@
         <div class="col-sm-6">
 
             <form class="container mt-4" method="POST" enctype="multipart/form-data">
+                <link rel="stylesheet" href="../static/basic.css">
+                <link rel="stylesheet" href="../static/icons/user_homepage.css">
                 {% csrf_token %}
 
                 <div class="row">
@@ -59,7 +61,7 @@
                             </div>
                         </div>
                         {% else %}
-                        <div style="border: 1px solid lightgrey; padding: 5px; border-radius: 6px;">
+                        <div>
                             <div class="form-check form-check-inline">
                                 <input type="radio" class="custom-control-input" name="gender" value="Male">
                                 <label for="male" class="custom-control-label">Male</label>
@@ -77,8 +79,9 @@
                         <input type="file" class="form-control mt-2" name="image" id="image">
                     </div>
                 </div>
-
-                <input type="submit" value="Submit" class="btn mt-4" accept="image/*" style="background-color: #4f868c; color: white; font-size: larger; width: 8rem;">
+                <div class="btn-wrapper">
+                <input type="submit" value="Submit" class="btn" accept="image/*">
+                </div>
             </form>
 
         </div>
