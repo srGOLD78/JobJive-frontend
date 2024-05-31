@@ -1,0 +1,44 @@
+.navbar {
+    background-color: #31498c;
+    color: #FFFFFF;
+}
+
+.view {
+    color: #FFFFFF;
+    display: block;
+    padding: .5rem 1rem;
+    text-decoration: none;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out;
+}
+.head1 {
+    color: #fbfbfb;
+    font-size: 25px;
+    font-weight: bold;
+    height: 50px;
+    margin-left: 10px;
+}
+
+.head2 {
+    color: #26caef;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.buttons{
+    color: white;
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+
+ul{
+    justify-content: center;
+    gap: 100px;
+    display: flex;
+    width: 100%;
+    margin-right: 0;
+}
+
+body {
+    font-family: "Roboto Light", serif;
+}

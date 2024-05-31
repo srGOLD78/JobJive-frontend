@@ -1,0 +1,28 @@
+i {
+    font-weight: bold;
+}
+
+.form-control{
+    width: 300px;
+}
+
+.user-form{
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-content: center;
+}
+
+.user-form div{
+    align-self: center;
+}
+
+.user-form h6{
+    align-self: center;
+}
+.user-form input{
+    align-self: center;
+}
+
+

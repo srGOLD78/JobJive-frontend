@@ -6,47 +6,32 @@
 {% endblock %}
 {% block body %}
 {% load static %}
-<div class="container mt-4">
-<table class="table table-hover" id="example">
-    <thead>
-        <tr>
-            <th>Sr.No</th>
-            <th>Company Name</th>
-            <th>Job Title</th>
-            <th>Salary</th>
-            <th>Location</th>
-            <th>Created On</th>
-            <th>Apply</th>
-        </tr>
-    </thead>
-    <tbody>
-        {% for job in jobs %}
-        <tr>
-            <td>{{forloop.counter}}</td>
-            <td>{{job.company.company_name}}</td>
-            <td>{{job.title}}</td>
-            <td>{{job.salary}}</td>
-            <td>{{job.location}}</td>
-            <td>{{job.creation_date}}</td>
-
-            {% if job.id in data %}
-            <td><a class="btn btn-success">Applied</a></td>
-            {% else %}
-            <td><a href="/job_detail/{{job.id}}/" class="btn btn-success">Apply</a></td>
-            {% endif %}
-        </tr>
-        {% endfor %}
-    </tbody>
-</table>
+<link rel="stylesheet" href="../static/index.css">
+<div class="main-page">
+    <p class="main-page-text">
+        Твой карьерный путь начинается здесь!
+    </p>
+<img class="main-page-img" alt="" src="../static/icons/man.png">
 </div>
-    <div class="container-fluid mt-2" style="background-color: #4f868c; width: 100%;">
-        <div class="row">
-            <div class="col-md-4">
-                <h3 style="color: aliceblue;">Contact Us</h3>
-                <p style="color: aliceblue">Email:JobJive@gmail.ru</p>
-                <p style="color: aliceblue">Mobile No.:+79773210969</p>
-            </div>
+<div class="main-page-job">
+    <div class="row-img">
+        <p class=main-page-job-text">
+            Помогаем найти работу:
+        </p>
+    <img class="small-icon" alt="" src="../static/icons/google.svg">
+        <img class="small-icon" alt="" src="../static/icons/facebook.svg">
+        <img class="small-icon" alt="" src="../static/icons/Microsoft.svg">
+        <img class="small-icon" alt="" src="../static/icons/yandex.svg">
+    </div>
+</div>
+<footer class="container-fluid mt-2 sex" style="background-color: #31498c; width: 100%;">
+    <div class="row">
+        <div class="col-md-4">
+            <h3 style="color: aliceblue;">Contact Us</h3>
+            <p style="color: aliceblue">Email:JobJive@gmail.com</p>
+            <p style="color: aliceblue">Mobile No.:+79773210969</p>
         </div>
     </div>
+</footer>
     
 {% endblock %}

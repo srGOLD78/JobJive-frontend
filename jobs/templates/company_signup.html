@@ -5,9 +5,9 @@
 {% block css %}
 {% endblock %}
 {% block body %}
-<form class="container mt-4" method="POST" enctype="multipart/form-data">
+<form class="registration-form" method="POST" enctype="multipart/form-data">
     {% csrf_token %}
-    
+    <link rel="stylesheet" href="../static/signup.css">
 
     <div class="row mt-4">
         <div class="form-group col-md-12">
@@ -52,6 +52,6 @@
         </div>
     </div>
     <br>
-<input type="submit" value="Submit" class="btn" style="background-color: #4f868c; color: white; font-size: larger; width: 8rem;">
+<input type="submit" value="Submit" class="btn">
 </form>
 {% endblock %}

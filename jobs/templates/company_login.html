@@ -5,14 +5,15 @@
 {% block css %}
 {% endblock %}
 {% block body %}
-<form method="POST"> 
+<form method="POST">
+    <link rel="stylesheet" href="../static/user_login.css">
     {% csrf_token %}
-    <div class="container mt-5">
+    <div class="user-form">
         <h6>Haven't register yet, then click here        <a href="/company_signup/" type="submit" class="btn" style="background-color: #4f868c; color: white;">Signup</a>
 
         <div class="mb-3">
-            <label for="username" class="form-label"><i style="font-weight: bold;">Username</i></label>
-            <input type="text" class="form-control" id="username" name="username" placeholder="Enter Username">
+            <label for="username" class="form-label"><i style="font-weight: bold;">E-mail</i></label>
+            <input type="text" class="form-control" id="username" name="username" placeholder="Enter E-mail">
         </div>
         <div class="mb-3">
             <label for="password" class="form-label"><i style="font-weight: bold;">Password</i></label>
